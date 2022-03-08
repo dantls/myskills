@@ -4,8 +4,8 @@ import {
   View,
   Text,
   StyleSheet,
-  SafeAreaView, 
-  TextInput
+  TextInput,
+  TouchableOpacity
 } from 'react-native';
 
 export function Home() {
@@ -22,6 +22,18 @@ export function Home() {
         placeholder="New Skill"
         placeholderTextColor="#555"
       />
+
+      <TouchableOpacity 
+        style={styles.button}
+        activeOpacity={.7}
+      >
+        <Text style={styles.buttonText}>Add</Text>
+      </TouchableOpacity>
+
+      <Text style={[styles.title, {marginTop: 50}]}>
+        My Skills
+      </Text>
+
     </View>
   );
 }
@@ -47,5 +59,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     padding: 15,
     borderRadius: 5,
+  },
+  button:{
+    padding: 15,
+    backgroundColor: '#A370F7',
+    borderRadius:7,
+    marginTop:20,
+    alignItems: 'center',
+  },
+  buttonText:{
+    color: '#FFF',
+    fontSize: 17,
+    fontWeight: 'bold',
   }
 })
